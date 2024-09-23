@@ -1,7 +1,7 @@
 # > bubble_sort([4,3,78,2,0,2])
 # => [0,2,2,3,4,78]
 
-def recursive_sort (array_sort)
+def recursive_sort (array_sort) # focuses on 1-pass of bubble sort
   array_hold = []
   index0 = 0
   index1 = 1
@@ -17,7 +17,7 @@ def recursive_sort (array_sort)
   return array_sort
 end
 
-def bubble_sort(array_input)
+def bubble_sort(array_input)  # checks and trigger if addition passes of bubble sort are needed
   array_compare = array_input.dup # .dup unlinks the 'array_compare' from the 'array_input' by duplicating
   until array_input == recursive_sort(array_compare) do # compares with the 'recursive_sort' ahead to check if additional sorting is needed
     recursive_sort(array_input)
